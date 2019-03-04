@@ -1,0 +1,40 @@
+.hide {
+  display: none;
+}
+
+.page-bd {
+  padding: 0 20px;
+}
+
+h3.m-title {
+  font-size: 0.65rem;
+  color: #666;
+}
+
+.m-content {
+  display: flex;
+}
+
+.m-left, .m-right {
+  flex: 1;
+}
+
+.m-content .desc {
+  margin: 5px;
+  padding: 0 10px;
+  background-color: #FCF6F5;;
+  height: 2.3rem;
+  line-height: 2.3rem;
+  color: #333;
+  border-radius: 4px;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-public {
+  background: url('../lib/img/toPublic@2x.png') center center no-repeat;
+  background-size: 100%;
+}

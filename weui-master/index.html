@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>慧行金市</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/weui.css"/>
+    <link rel="stylesheet" href="css/weuix.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swipe.js"></script>
+
+</head>
+
+<body ontouchstart>
+<div class="contianer page-bg home">
+    <div class="tabs tabs1">
+        <div class="page-hd">
+            <h1 class="page-title">
+                首页
+            </h1>
+            <div class="slide" id="slide1">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <img src='images/1.jpg' alt="">
+                        </a>
+                        <div class="slide-desc">白日依山尽黄河入海流鱼群千里马更上高楼处</div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src='images/2.jpg' alt="">
+                        </a>
+                        <div class="slide-desc">东风无力百花残</div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src='images/3.jpg' alt="">
+                        </a>
+                        <div class="slide-desc">千金易得一将难求</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-bd">
+            <h3 class="m-title">产品目录</h3>
+            <div class="m-content">
+                <a class="m-left" href="#">
+                    <div class="desc">
+                        <i class="icon icon-public"></i>
+                        对公客户
+                    </div>
+                </a>
+                <a class="m-right" href="#">
+                    <div class="desc">
+                        <i class="icon icon-private"></i>
+                        对私客户
+                    </div>
+                </a>
+            </div>
+            <h3 class="m-title">产品维护目录</h3>
+            <div class="m-content">
+                <a class="m-left" href="#">
+                    <div class="desc">
+                        <i class="icon icon-public"></i>
+                        金融同业客户
+                    </div>
+                </a>
+                <a class="m-right" href="#">
+                    <div class="desc">
+                        <i class="icon icon-private"></i>
+                        跨国公司客户
+                    </div>
+                </a>
+            </div>
+            <div class="m-content">
+                <a class="m-left" href="#">
+                    <div class="desc">
+                        <i class="icon icon-public"></i>
+                        进出口贸易客户
+                    </div>
+                </a>
+                <a class="m-right" href="#">
+                    <div class="desc">
+                        <i class="icon icon-private"></i>
+                        贵金属客户
+                    </div>
+                </a>
+            </div>
+            <div class="m-content">
+                <a class="m-left" href="#">
+                    <div class="desc">
+                        <i class="icon icon-public"></i>
+                        大宗商品客户
+                    </div>
+                </a>
+                <a class="m-right" href="#">
+                    <div class="desc">
+                        <i class="icon icon-private"></i>
+                        个人客户
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="tabs tabs2 hide">
+        this is page 2 show
+    </div>
+
+</div>
+<div class="weui-tab tab-bottom " style="height:44px;">
+    <div class="weui-tab tab-bottom " style="height:44px;">
+        <div class="weui-tabbar">
+            <a href="javascript:;" class="weui-tabbar__item">
+                    <span style="display: inline-block;position: relative;">
+                        <i class="icon icon-27 f27 weui-tabbar__icon"></i>
+                    </span>
+                <p class="weui-tabbar__label">首页</p>
+            </a>
+            <a href="javascript:;" class="weui-tabbar__item">
+                <i class="icon icon-28 f27 weui-tabbar__icon"></i>
+                <p class="weui-tabbar__label">合规文档</p>
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('#slide1').swipeSlide({
+            autoSwipe: false,//自动切换默认是
+            speed: 3000,//速度默认4000
+            continuousScroll: true,//默认否
+            transitionType: 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',//过渡动画linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier
+            lazyLoad: true,//懒加载默认否
+            firstCallback: function (i, sum, me) {
+                me.find('.dot').children().first().addClass('cur');
+            },
+            callback: function (i, sum, me) {
+                me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+            }
+        });
+
+        /* tab 切换 */
+        $('.weui-tabbar__item').on('click', function () {
+            let index = $(this).index();
+            console.log(index);
+            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+            if (index == 0) {
+                $('.tabs').addClass('hide');
+                $('.tabs1').removeClass('hide');
+            } else {
+                $('.tabs').addClass('hide');
+                $('.tabs2').removeClass('hide');
+            }
+        });
+    });
+</script>
+</body>
+</html>
