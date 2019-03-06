@@ -1,14 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system-font, "微软雅黑", "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+html {
+  font-size: 16px;
+}
+
 .hide {
   display: none;
 }
 
+ul, li {
+  list-style: none;
+  list-style-type: none;
+}
+
+.container .hd {
+  position: relative;
+  text-align: center;
+  font-size: 1.15rem;
+  height: 44px;
+  line-height: 44px;
+  font-weight: bold;
+  background: #FAFAFA;
+  border-bottom: .5px solid rgba(161, 161, 161, 0.50);
+
+}
+
+.container .icon-back {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background: url('../lib/img/back_arrow@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
 .page-bd {
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 h3.m-title {
-  font-size: 0.65rem;
-  color: #666;
+  font-size: 1.05rem;
+  color: #000;
+  font-weight: bold;
 }
 
 .m-content {
@@ -20,21 +64,571 @@ h3.m-title {
 }
 
 .m-content .desc {
+  display: flex;
+  align-items: center;
   margin: 5px;
-  padding: 0 10px;
+  padding: 20px 0 20px 10px;;
   background-color: #FCF6F5;;
-  height: 2.3rem;
-  line-height: 2.3rem;
   color: #333;
   border-radius: 4px;
+  font-size: 1rem;
 }
 
 .icon {
-  width: 1rem;
-  height: 1rem;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.icon-index {
+  background: url('../lib/img/iconIndex@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+.weui-bar__item_on .icon-index {
+  background: url('../lib/img/iconIndex-active@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+.icon-doc {
+  background: url('../lib/img/iconDoc@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+.weui-bar__item_on .icon-doc {
+  background: url('../lib/img/iconDoc-active@2x.png') center center no-repeat;
+  background-size: 100%;
 }
 
 .icon-public {
+  margin-right: 10px;
   background: url('../lib/img/toPublic@2x.png') center center no-repeat;
   background-size: 100%;
 }
+
+.icon-private {
+  margin-right: 10px;
+  background: url('../lib/img/toPrivate@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+/* 金融同业 */
+.icon-financial {
+  margin-right: 10px;
+  background: url('../lib/img/financial@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+/* 跨国公司 */
+.icon-tnc {
+  margin-right: 10px;
+  background: url('../lib/img/tnc@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+/* 进出口贸易 */
+.icon-trade {
+  margin-right: 10px;
+  background: url('../lib/img/trade@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+/* 贵金属 */
+.icon-metal {
+  margin-right: 10px;
+  background: url('../lib/img/metal@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+/* 大宗商品 */
+.icon-bulk {
+  margin-right: 10px;
+  background: url('../lib/img/bulk@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+.icon-personal {
+  margin-right: 6px;
+  background: url('../lib/img/personal@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+/* 常用合规文档  */
+.page-list {
+  padding: 15px 0 50px 0;
+}
+
+.doc-list {
+  margin-bottom: 15px;
+}
+
+.doc-link {
+  position: relative;
+  display: block;
+  padding: 15px 40px 15px 10px;
+  font-size: .75rem;
+  color: #333;;
+  border: .5px solid #D6D6D6;
+  border-radius: 8px;
+  background: #FFFFFF;
+  box-shadow: inset 2px 0 0 0 #68AAFF;
+}
+
+.doc-link:after {
+  content: " ";
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-width: 2px 2px 0 0;
+  border-color: #333;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: 12px;
+}
+
+/* hack */
+.page-hd {
+  padding: 20px 20px 15px;
+}
+
+.weui-navigator-list li.weui-state-hover, .weui-navigator-list li.weui-state-active a {
+  color: #000;
+  font-size: .85rem;
+}
+
+.weui-navigator-list li a {
+  color: #999;
+}
+
+.weui-navigator-list li.weui-state-hover, .weui-navigator-list li.weui-state-active a:after {
+  background-color: #4186FF;
+}
+
+.weui-tabbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  z-index: 500;
+  bottom: 0;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0 -2px 12px 0 rgba(231, 231, 231, 0.50), inset 0 1px 0 0 #E5E5E5;
+}
+
+/* 对公客户 二级菜单*/
+.page-second .m-list .m-link {
+  display: flex;
+  color: #333;
+  align-items: center;
+  text-decoration: none;
+}
+
+.page-second .m-list .m-logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding: 0 15px;
+}
+
+.page-second .m-list .m-desc {
+  position: relative;
+  padding: 30px 0;
+  width: calc(100% - 2.5rem);
+  font-size: 1rem;
+  color: #222;
+  border-bottom: .5px solid rgba(213, 213, 213, 0.50);
+}
+
+.page-second .m-list .m-desc:after {
+  content: " ";
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-width: 2px 2px 0 0;
+  border-color: #333;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: 15px;
+}
+
+/* 债券市场类（对公）三级菜单 */
+.page-third .header {
+  text-align: center;
+  font-size: 1.25rem;
+  height: 44px;
+  line-height: 44px;
+  font-weight: bold;
+  background: #FAFAFA;
+  box-shadow: inset 0 -1px 0 0 rgba(161, 161, 161, 0.50);
+}
+
+.page-third .list li {
+  position: relative;
+  padding-left: 50px;
+}
+
+.page-third .list .link {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 1rem;
+  color: #222;
+  border-bottom: .5px solid rgba(213, 213, 213, 0.50);
+}
+
+.page-third .list .link::before {
+  content: ' ';
+  position: absolute;
+  display: inline-block;
+  left: 20px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: #408BF1;
+  transform: rotate(-315deg);
+}
+
+/*
+.page-bondMarket .list .link::after {
+  content: " ";
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-width: 2px 2px 0 0;
+  border-color: #333;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: 15px;
+}
+*/
+
+/* 产品详情通用模板 */
+.m-product-view .hd {
+  text-align: center;
+  font-size: 1.15rem;
+  height: 44px;
+  line-height: 44px;
+  font-weight: bold;
+  background: #FAFAFA;
+  border-bottom: .5px solid rgba(161, 161, 161, 0.50);
+}
+
+.m-product-view .bd {
+  padding: 0 15px 60px 15px;
+}
+
+.m-product-view .m-title {
+  padding: 20px 0 30px;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.m-product-view .m-title .line {
+  position: relative;
+  margin-top: -2px;
+  width: 60px;
+  border: 4px solid #8bb1ff;
+
+}
+
+.m-product-view .m-link {
+  margin-bottom: 20px;
+  color: #3260BD;
+  font-size: 1rem;
+  line-height: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.m-product-view .icon-doubleArrow {
+  display: inline-block;
+  margin-right: 10px;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url('../lib/img/doubleArrow@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+.m-product-view .m-subtitle {
+  margin: 20px 0 10px 0;
+  font-size: 1.15rem;
+  color: #000;
+}
+
+.m-product-view .m-desc {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.m-product-view .u-intro {
+  line-height: 2;
+}
+
+.m-product-view .u-mode {
+  margin-bottom: 15px;
+  line-height: 2;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.m-product-view .u-point {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.m-product-view .u-point .u-title {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.m-product-view .u-point .u-text {
+  text-indent: 1rem;
+  font-size: 1rem;
+}
+
+.m-product-view .u-li {
+  position: relative;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+}
+
+.m-product-view .u-li:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1rem;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.m-product-view .u-flow {
+  margin-bottom: 10px;
+}
+
+.m-product-view .u-flow .u-title {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.m-product-view .u-flow .u-text {
+  text-indent: 1rem;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.m-product-view .u-risk {
+  margin-bottom: 15px;
+}
+
+.m-product-view .u-risk .u-title, .m-product-view .u-subtitle {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.m-product-view .u-risk .u-text {
+  position: relative;
+  font-size: 1rem;
+  padding-left: 1rem;
+  color: #333;
+  line-height: 2;
+}
+
+.m-product-view .u-risk .u-text:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1rem;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.m-product-view .u-tips {
+  margin-bottom: 20px;
+}
+
+.m-product-view .u-tips .u-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.m-product-view .u-tips .u-text {
+  color: #333;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.m-product-view .u-rules {
+  margin-bottom: 20px;
+}
+
+.m-product-view .u-rules .u-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.m-product-view .u-rules .u-link {
+  position: relative;
+  display: block;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border: .5px solid #D6D6D6;
+  box-shadow: inset 2px 0 0 0 #68AAFF;
+  border-radius: 8px;
+  color: #333;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.m-product-view .u-rules .u-link:after {
+  content: " ";
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-width: 2px 2px 0 0;
+  border-color: #333;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: 12px;
+}
+
+.m-product-view .u-demo {
+  margin-bottom: 20px;
+}
+
+.m-product-view .u-demo .u-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.m-product-view .u-demo .u-text {
+  color: #333;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.m-product-view .m-contact {
+  margin-bottom: 10px;
+  padding: 6px 10px 6px 20px;
+  border: .5px solid #D6D6D6;
+  border-radius: 8px;
+  background: url('../lib/img/card@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+.m-product-view .u-name {
+  padding: 7.5px 0;
+  font-size: 1rem;
+  color: #4374D3;
+  letter-spacing: 0.52px;
+}
+
+.m-product-view .u-dep {
+  padding: 7.5px 0;
+  font-size: .8rem;
+  color: #999;
+  letter-spacing: 0.45px;
+}
+
+.m-product-view .u-tel {
+  padding: 7.5px 0;
+  font-size: .8rem;
+  letter-spacing: 0.45px;
+}
+
+.m-product-view .phone, .m-product-view .email {
+  display: flex;
+  align-items: center;
+  color: #3376C5;
+}
+
+.m-product-view .u-email {
+  padding: 7.5px 0;
+  font-size: .8rem;
+  color: #3376C5;
+  letter-spacing: 0.45px;
+}
+
+.m-product-view .icon-phone {
+  display: inline-block;
+  margin-right: 6px;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url('../lib/img/phone@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+.m-product-view .icon-email {
+  display: inline-block;
+  margin-right: 6px;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url('../lib/img/email@2x.png') center center no-repeat;
+  background-size: 100%;
+}
+
+.m-product-view .btn {
+  position: fixed;
+  bottom: 5%;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.m-product-view .btn-size {
+  flex: 1;
+  display: inline-block;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-bottom: 15px;
+  background: url("../lib/img/btn-size@2x.png") center center no-repeat;
+  background-size: 100%;
+}
+
+.m-product-view .btn-top {
+  flex: 1;
+  display: inline-block;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: url("../lib/img/btn-top@2x.png") center center no-repeat;
+  background-size: 100%;
+}
+

@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system-font, "微软雅黑", "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+ul, li {
+  list-style: none;
+  list-style-type: none;
+}

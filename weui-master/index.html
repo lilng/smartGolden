@@ -7,37 +7,34 @@
     <link rel="stylesheet" href="css/weui.css"/>
     <link rel="stylesheet" href="css/weuix.css"/>
     <link rel="stylesheet" href="css/index.css"/>
-    <script src="js/zepto.min.js"></script>
-    <script src="js/swipe.js"></script>
-
 </head>
 
 <body ontouchstart>
-<div class="contianer page-bg home">
+<div class="container page-bg ">
     <div class="tabs tabs1">
         <div class="page-hd">
             <h1 class="page-title">
                 首页
             </h1>
-            <div class="slide" id="slide1">
+            <div class="slide" id="slide1" style="height: 120px">
                 <ul>
                     <li>
                         <a href="javascript:;">
-                            <img src='images/1.jpg' alt="">
+                            <img src='lib/img/banner@2x.png' alt="bannerImg">
                         </a>
-                        <div class="slide-desc">白日依山尽黄河入海流鱼群千里马更上高楼处</div>
+                        <!--<div class="slide-desc">白日依山尽黄河入海流鱼群千里马更上高楼处</div>-->
                     </li>
                     <li>
                         <a href="javascript:;">
-                            <img src='images/2.jpg' alt="">
+                            <img src='lib/img/banner@2x.png' alt="">
                         </a>
-                        <div class="slide-desc">东风无力百花残</div>
+                        <!--<div class="slide-desc">东风无力百花残</div>-->
                     </li>
                     <li>
                         <a href="javascript:;">
-                            <img src='images/3.jpg' alt="">
+                            <img src='lib/img/banner@2x.png' alt="">
                         </a>
-                        <div class="slide-desc">千金易得一将难求</div>
+                        <!--<div class="slide-desc">千金易得一将难求</div>-->
                     </li>
                 </ul>
             </div>
@@ -45,58 +42,58 @@
         <div class="page-bd">
             <h3 class="m-title">产品目录</h3>
             <div class="m-content">
-                <a class="m-left" href="#">
+                <a class="m-left" href="product/toPublicClient.html">
                     <div class="desc">
                         <i class="icon icon-public"></i>
-                        对公客户
+                        对公产品
                     </div>
                 </a>
-                <a class="m-right" href="#">
+                <a class="m-right" href="product/toPrivateClient.html">
                     <div class="desc">
                         <i class="icon icon-private"></i>
-                        对私客户
+                        对私产品
                     </div>
                 </a>
             </div>
-            <h3 class="m-title">产品维护目录</h3>
+            <h3 class="m-title">客户维护目录</h3>
             <div class="m-content">
-                <a class="m-left" href="#">
+                <a class="m-left" href="client/finance.html">
                     <div class="desc">
-                        <i class="icon icon-public"></i>
+                        <i class="icon icon-financial"></i>
                         金融同业客户
                     </div>
                 </a>
-                <a class="m-right" href="#">
+                <a class="m-right" href="client/toTransnational.html">
                     <div class="desc">
-                        <i class="icon icon-private"></i>
+                        <i class="icon icon-tnc"></i>
                         跨国公司客户
                     </div>
                 </a>
             </div>
             <div class="m-content">
-                <a class="m-left" href="#">
+                <a class="m-left" href="client/imAndExTrade.html">
                     <div class="desc">
-                        <i class="icon icon-public"></i>
+                        <i class="icon icon-trade"></i>
                         进出口贸易客户
                     </div>
                 </a>
-                <a class="m-right" href="#">
+                <a class="m-right" href="client/metal.html">
                     <div class="desc">
-                        <i class="icon icon-private"></i>
-                        贵金属客户
+                        <i class="icon icon-metal"></i>
+                        贵金属类客户
                     </div>
                 </a>
             </div>
             <div class="m-content">
-                <a class="m-left" href="#">
+                <a class="m-left" href="client/bulkCmd.html">
                     <div class="desc">
-                        <i class="icon icon-public"></i>
-                        大宗商品客户
+                        <i class="icon icon-bulk"></i>
+                        大宗商品类客户
                     </div>
                 </a>
-                <a class="m-right" href="#">
+                <a class="m-right" href="client/individualClient.html">
                     <div class="desc">
-                        <i class="icon icon-private"></i>
+                        <i class="icon icon-personal"></i>
                         个人客户
                     </div>
                 </a>
@@ -106,26 +103,122 @@
         </div>
     </div>
     <div class="tabs tabs2 hide">
-        this is page 2 show
+        <div class="page-hd">
+            <h1 class="page-title">常用合规文档</h1>
+        </div>
+        <div id="tagnav" class="weui-navigator weui-navigator-wrapper">
+            <ul class="weui-navigator-list">
+                <li data-index="0"><a href="javascript:;">授信管理</a></li>
+                <li data-index="1"><a href="javascript:;">交易对手管理</a></li>
+                <li data-index="2"><a href="javascript:;">关联交易合规管理</a></li>
+                <li data-index="3"><a href="javascript:;">反洗钱合规管理</a></li>
+                <li data-index="4"><a href="javascript:;">规章制度管理办法</a></li>
+                <li data-index="5"><a href="javascript:;">员工行为管理办法</a></li>
+                <li data-index="6"><a href="javascript:;">海外金融市场业务</a></li>
+            </ul>
+        </div>
+        <div class="page-bd">
+            <ul class="page-ul">
+                <li class="page-list">
+                    <ul>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行大中型对公客户综合授信与信用审批操作规程（2018年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行境外政府类机构额度授信管理操作规程（2018年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行境外金融机构额度授信管理操作规程（2018年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《关于加强低信用风险业务管理的通知》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《关于明确低信用风险业务授信审批相关事项的通知》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行大中型对公客户授信管理办法（2017年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行国别风险限额管理办法（2017年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行国内金融机构额度授信管理操作规程（2017年版）》</a></li>
+                    </ul>
+                </li>
+                <li class="page-list hide">
+                    <ul>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行金融机构交易对手管理办法（2017年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《金融市场业务金融机构交易对手实施细则（2017年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《关于下发证券 信托 期货三类客户差异化管理名单及相关要求的通知》</a></li>
+                    </ul>
+                </li>
+                <li class="page-list hide">
+                    <ul>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行关联方识别手册（2018年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行股份有限公司内部交易管理办法（2017版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行股份有限公司关联交易管理规程》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行股份有限公司关联交易管理实施办法》</a></li>
+                    </ul>
+                </li>
+                <li class="page-list hide">
+                    <ul>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行金融制裁合规管理办法（2019年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行反洗钱工作管理办法（2019年版）》</a></li>
+                        <li class="doc-list"><a href="#"
+                                                class="doc-link">《中国建设银行反洗钱客户身份识别和客户身份资料及交易记录保存管理办法（2018年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行反洗钱工作管理办法（2019年版）》</a></li>
+                        <li class="doc-list"><a href="#"
+                                                class="doc-link">《转发中国人民银行反洗钱局关于印发法人金融机构洗钱和恐怖融资风险管理指引（试行）的通知》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行反洗钱术语手册》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行新一代信息系统反洗钱组件操作规程（2018年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行大额交易和可疑交易报告管理办法（2017年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行创新型金融产品及服务洗钱风险评估工作指引》</a></li>
+
+                    </ul>
+                </li>
+                <li class="page-list hide">
+                    <ul>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行规章制度管理办法（2017年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行规章制度审查指导意见（2017年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行合规性审查管理办法（2017年版）》</a></li>
+                    </ul>
+                </li>
+                <li class="page-list hide">
+                    <ul>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行员工行为管理办法（2018年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行员工合规必读（2018年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行违规责任认定办法（2018年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行总行金融市场业务员工行为准则（2018年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行同业业务 金融市场业务 资产管理业务关键岗位人员脱密期管理规定》</a>
+                        </li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行员工行为积分管理办法（试行）（2017年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行员工违规处理办法》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行金融市场业务交易员风险管理暂行规定（2015年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《中国建设银行金融市场业务关键岗位人员离岗休假、岗位轮换及离职管理实施办法》</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="page-list hide">
+                    <ul>
+                        <li class="doc-list"><a href="#" class="doc-link">《海外机构金融市场业务八不准规定（2016年版）》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《海外机构及特殊经济区金融市场业务授权方案指标释义及案例解析（2016年版）》</a>
+                        </li>
+                        <li class="doc-list"><a href="#" class="doc-link">《海外机构金融市场业务验收核检机制》</a></li>
+                        <li class="doc-list"><a href="#" class="doc-link">《金融市场业务交易记录修改规程》</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 
 </div>
 <div class="weui-tab tab-bottom " style="height:44px;">
     <div class="weui-tab tab-bottom " style="height:44px;">
         <div class="weui-tabbar">
-            <a href="javascript:;" class="weui-tabbar__item">
-                    <span style="display: inline-block;position: relative;">
-                        <i class="icon icon-27 f27 weui-tabbar__icon"></i>
+            <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+                    <span style="display: inline-block;position: relative;top:4px">
+                        <i class="icon icon-index weui-tabbar__icon"></i>
                     </span>
                 <p class="weui-tabbar__label">首页</p>
             </a>
             <a href="javascript:;" class="weui-tabbar__item">
-                <i class="icon icon-28 f27 weui-tabbar__icon"></i>
-                <p class="weui-tabbar__label">合规文档</p>
+                <span style="display: inline-block;position: relative;top:4px">
+                    <i class="icon icon-doc  weui-tabbar__icon"></i>
+                </span>
+                <p class="weui-tabbar__label">常用合规文档</p>
             </a>
         </div>
     </div>
 </div>
+<script src="js/zepto.min.js"></script>
+<script src="js/swipe.js"></script>
+<script src="js/iscroll-lite.js"></script>
 <script>
     $(function () {
         $('#slide1').swipeSlide({
@@ -142,6 +235,12 @@
             }
         });
 
+        TagNav('#tagnav', {
+            type: 'scrollToNext',
+            curClassName: 'weui-state-active',
+            index: 0
+        });
+
         /* tab 切换 */
         $('.weui-tabbar__item').on('click', function () {
             let index = $(this).index();
@@ -155,6 +254,19 @@
                 $('.tabs2').removeClass('hide');
             }
         });
+
+        /* 文档内容切换 */
+        $('.weui-navigator-list li').on('click', function (e) {
+            let index = $(this).attr('data-index');
+            let $pageList = $('.page-list');
+            $pageList.addClass('hide');
+            setTimeout(() => {
+                $pageList.forEach((e, idx) => {
+                    idx == index ? $(e).removeClass('hide') : '';
+                });
+            }, 200)
+
+        })
     });
 </script>
 </body>
